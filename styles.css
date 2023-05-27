@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background-blend-mode: multiply;
+    background: url(./img/section-background-image.png) no-repeat;
+    background-size: cover;
+    background-color: rgb(83, 83, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.open-mother {
+    width: 100%;
+    height: 70px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.open {
+    width: 170px;
+    height: 35px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.main {
+    width: 96%;
+    height: 87%;
+    background-color: black;
+    border-radius: 15px;
+    /* opacity: 0.8; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 350px;
+    height: 240px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.product-image {
+    width: 80%;
+    height: 70%;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    width: 170px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ==================== */
+
+.cardMother {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    /* opacity: 0.9; */
+    display: none;
+}
+
+.cart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cardField {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+}
+
+.cardHeading {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid white;
+}
+
+.closeBtn {
+    width: 170px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s ease;
+}
+
+
+
+.loader-main {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.loader-main:hover {
+    background: #03e9f4;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+}
+
+.loader-main span {
+    position: absolute;
+    display: block;
+}
+
+.loader-main span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.loader-main span:nth-child(3) {
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0s;
+}
+
+@keyframes animate3 {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+
+.loader-main span:nth-child(2) {
+    right: 0;
+    top: -100%;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+.loader-main span:nth-child(4) {
+    left: 0;
+    top: 100%;
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate4 {
+    0% {
+        top: 100%;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
